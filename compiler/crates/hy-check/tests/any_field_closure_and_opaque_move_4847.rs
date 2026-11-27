@@ -115,7 +115,7 @@ fn rejects_move_struct_with_any_field_holding_foreign_opaque() {
            _ = b\n\
          }\n\
          fn main() {\n\
-           var mu sync.Mutex\n\
+           var mu sync.mutex\n\
            b := box{v: mu}\n\
            task worker(move b)\n\
          }\n",
@@ -136,7 +136,7 @@ fn rejects_move_struct_with_any_field_holding_foreign_opaque() {
            _ = b\n\
          }\n\
          fn main() {\n\
-           var mu sync.Mutex\n\
+           var mu sync.mutex\n\
            var b box\n\
            b.v = mu\n\
            task worker(move b)\n\
